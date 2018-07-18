@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MutidatasourceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(MutidatasourceApplication.class, args);
 	}
 }
