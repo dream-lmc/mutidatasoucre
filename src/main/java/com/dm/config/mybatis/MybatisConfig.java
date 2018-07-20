@@ -32,11 +32,10 @@ public class MybatisConfig {
     public SqlSessionFactoryBean createSqlSessionFactoryBean() throws IOException {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         //设置mybatis configuration 扫描路径
-        //sqlSessionFactoryBean.setConfigLocation(new ClassPathResource("spring"));
+        //sqlSessionFactoryBean.setConfigLocation(new ClassPathResource("mappers"));
         sqlSessionFactoryBean.setDataSource(dataSource);
-
         PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources("mappers"));
+        sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources("mappers/*.xml"));
         return sqlSessionFactoryBean;
     }
 
